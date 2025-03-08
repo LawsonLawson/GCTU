@@ -3,17 +3,22 @@
 
 using namespace std;
 
-/* function prototype to compute the commission and validate user input */
+/* function prototype */
 double calculate_commission(double sales_amount);
 double validate_user_input(string user_prompt);
+void display_welcome_message();
+
 
 
 int main()
 {
 	double sales_amount, commission;
 
+	/* display welcome message */
+	display_welcome_message();
+
 	/* prompt user for sales amount */
-	sales_amount = validate_user_input("Please enter the sales amount\n");
+	sales_amount = validate_user_input("\n\nPlease enter your sales amount: (GHC)\n");
 
 	/* compute the commission */
 	commission = calculate_commission(sales_amount);
@@ -32,10 +37,11 @@ int main()
  */
 double calculate_commission(double sales_amount)
 {
-	double commission_rate, commission, minimum_sales_amount = 30000.00;
+	double commission_rate, commission;
+	const double MINIMUM_SALES_AMOUNT = 30000.00;
 
 	/* check if sales amount is greater or equal to minimum sales amount */
-	if (sales_amount >= minimum_sales_amount)
+	if (sales_amount >= MINIMUM_SALES_AMOUNT)
 	{
 		/* assign commission rate based on instruction */
 		commission_rate = 0.25;
@@ -78,7 +84,7 @@ double validate_user_input(string user_prompt)
                 if (cin.fail())
                 {
                         /* insertion failed so print error message */
-                        cout << "\nInvalid input !.. Please enter a valid sales amount\n\n";
+                        cout << "\nInvalid input !.. Please enter a valid sales amount in figures\n\n";
 
                         /* clear error flag */
                          cin.clear();
@@ -88,10 +94,10 @@ double validate_user_input(string user_prompt)
                 }
 
                 /* check if the user entered a number less than 0 */
-                else if (return_value <= 0)
+                else if (return_value < 0)
                 {
                         /* if yes, let's prompt them to do the right thing */
-                        cout << "\nPlease enter a positive sales amount. Your sales cannot be negative!\n\n";
+                        cout << "\nPlease enter a positive sales amount. Your sales cannot be a negative number!\n\n";
                 }
 
                 else
@@ -100,4 +106,16 @@ double validate_user_input(string user_prompt)
                         return (return_value);
                 }
         }
+}
+
+/**
+ * display_welcome_message: This function display a helpful welcome to the user.
+ *
+ * return (void): Returns nothing.
+ */
+void display_welcome_message()
+{
+	string display_message = "Welcome to the Commission Calculator!\nCommission Rates:\n-25% for sales GHC 30,000 or more.\n-15% for sales below GHC 30,000.";
+
+	cout << display_message;
 }

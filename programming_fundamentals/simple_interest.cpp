@@ -72,10 +72,10 @@ float validate_user_input(string user_prompt)
 			cout << "\nInvalid input !.. Please enter a valid input\n\n";
 
 			/* clear error flag */
-			cin.clear();
+			 cin.clear();
 
 			/* discard the invalid input which couldn't be inserted */
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			 cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		}
 
 		/* check if the user entered a number less than 0 */
