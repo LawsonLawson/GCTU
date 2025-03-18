@@ -21,7 +21,7 @@ using namespace std;
  * main : This program will help determine the grade of a student based on the
  * marks (int/float) provided by the user.
  *
- * returns : 0 upon successfull running of the program, 1 otherwise.
+ * returns : 0 upon successful running of the program, 1 otherwise.
  */
 int main()
 {
