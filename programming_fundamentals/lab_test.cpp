@@ -23,18 +23,16 @@ using namespace std;
  *
  * returns : 0 upon successful running of the program, 1 otherwise.
  */
+
+
 int main()
 {
-	/* a variable to to store user input */
 	float score;
 
-	/* prompt the user to enter the marks */
 	cout << "Please enter the student's mark \n";
 
-	/* store user input in the variable "score" */
 	cin >> score;
 
-	/* logically check for each score and print appropriate grade statement*/
 	if (score >= 70 && score <= 100)
 	{
 		cout << "The grade for " << score <<  " is 'A'\n";
