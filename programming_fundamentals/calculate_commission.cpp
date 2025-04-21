@@ -8,6 +8,8 @@ double calculate_commission(double sales_amount);
 double validate_user_input(string user_prompt);
 void display_welcome_message();
 
+const double HIGH_COMMISSION_RATE = 0.25, LOW_COMMISSION_RATE = 0.15, MINIMUM_SALES_AMOUNT = 30000;
+
 
 
 int main()
@@ -37,26 +39,10 @@ int main()
  */
 double calculate_commission(double sales_amount)
 {
-	double commission_rate, commission;
-	const double MINIMUM_SALES_AMOUNT = 30000.00;
+	double commission;
 
 	/* check if sales amount is greater or equal to minimum sales amount */
-	if (sales_amount >= MINIMUM_SALES_AMOUNT)
-	{
-		/* assign commission rate based on instruction */
-		commission_rate = 0.25;
-
-		/* compute commission */
-		commission = commission_rate * sales_amount;
-	}
-	else
-	{
-		/* else assign the altenative rate based on instruction */
-		commission_rate = 0.15;
-
-		/* compute commission */
-		commission = commission_rate * sales_amount;
-	}
+	sales_amount >= MINIMUM_SALES_AMOUNT ? commission = HIGH_COMMISSION_RATE * sales_amount : commission = LOW_COMMISSION_RATE * sales_amount;
 
 	/* return the commission to the caller of the function */
 	return (commission);
@@ -115,7 +101,7 @@ double validate_user_input(string user_prompt)
  */
 void display_welcome_message()
 {
-	string display_message = "Welcome to the Commission Calculator!\nCommission Rates:\n-25% for sales GHC 30,000 or more.\n-15% for sales below GHC 30,000.";
+	string display_message = "Welcome to the Commission Calculator!\n";
 
 	cout << display_message;
 }
