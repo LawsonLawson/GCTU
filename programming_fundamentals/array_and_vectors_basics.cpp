@@ -2,10 +2,10 @@
 #include <vector>
 
 /**
- * main : So this is just some function making use of vectors which I learnnt
+ * main : So these are just some functions making use of vector which I learnt
  * just today. It is to test my basic understanding before I dive deeper.
  * Array typically will require I hardcode my size, and use them in loops but
- * vectors give much more advantage. Vectors are more like arrays on steroids.
+ * vector gives much more advantage. Vector is more like arrays on steroids.
  * I don't need to specify the size and neither do I need to set all the
  * elements to zero. I can push_back(add to the end), pop, etc.
  */
@@ -19,7 +19,7 @@ using namespace std;
 
 int main()
 {
-	// Let's just call the functions since I put them all in a single file...
+	// Let's just make function calls ...
 	alphabet_to_unicode();
 
 	list_planets();
