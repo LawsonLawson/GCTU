@@ -67,8 +67,6 @@ void alphabet_to_unicode()
 
 void list_planets()
 {
-        int i;
-
         vector<string> planets = {
                 "Mercury", "Venus",
                 "Earth", "Mars",
@@ -77,9 +75,9 @@ void list_planets()
                 "Pluto"
         };
 
-        for (i = 0; i < planets.size(); i++)
+        for (string i : planets)
         {
-                cout << planets[i] << endl;
+                cout << i << endl;
         }
 
 }
