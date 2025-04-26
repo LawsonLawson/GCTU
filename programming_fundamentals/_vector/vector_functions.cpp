@@ -111,7 +111,7 @@ void lowest_element_of_the_array(vector<int> some_array)
 
         int lowest_element = some_array[0];
 
-        for (counter = 0; counter < some_array.size(); counter++)
+        for (counter = 1; counter < some_array.size(); counter++)
         {
                 if (some_array[counter] < lowest_element)
                 {
@@ -131,7 +131,7 @@ void highest_element_of_the_array(vector<int> some_array)
 
         int highest_element = some_array[0];
 
-        for (counter = 0; counter < some_array.size(); counter++)
+        for (counter = 1; counter < some_array.size(); counter++)
         {
                 if (some_array[counter] > highest_element)
                 {
