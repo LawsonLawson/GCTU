@@ -161,12 +161,51 @@ void sum_of_elements_of_the_array(vector<int> some_array)
  */
 void product_of_the_elements_of_the_array(vector<int> some_array)
 {
-        int product = 0;
+        int product = 1, counter= 0;
 
         for (int element : some_array)
+	{
+		product *= element;
+	}
+
+        cout << "The product of all the elements of the array is "  << product << endl;
+}
+
+/**
+ * This function computes the sum of elements of two given arrays.
+ */
+void sum_of_elements_of_two_arrays(vector<int> first_array, vector<int> second_array)
+{
+	int first_total = 0, second_total = 0, sum;
+
+	for (int element : first_array)
+	{
+		first_total += element;
+	}
+	for (int element : second_array)
+	{
+		second_total += element;
+	}
+	sum = first_total + second_total;
+
+	cout << "The sum of elements of the two given arrays is " << sum << "." << endl;
+}
+
+/**
+ * This function takes two arrays and computes the product of their elements.
+ */
+void product_of_the_elements_of_two_arrays(vector<int>first_array, vector<int>second_array)
+{
+	 int product = 1;
+
+        for (int element : first_array)
+        {
+		product *= element;
+	}
+        for (int element : second_array)
         {
                 product *= element;
         }
 
-        cout << "The product of all the elements of the array is "  << product << endl;
-} 
+        cout << "The product of elements of the two given arrays is " << product << "." << endl;
+}
