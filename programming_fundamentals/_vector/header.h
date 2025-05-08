@@ -17,5 +17,8 @@ void lowest_element_of_the_array(vector<int> some_array);
 void highest_element_of_the_array(vector<int> some_array);
 void sum_of_elements_of_the_array(vector<int> some_array);
 void product_of_the_elements_of_the_array(vector<int> some_array);
+void sum_of_elements_of_two_arrays(vector<int> first_array, vector<int> second_array);
+void product_of_the_elements_of_two_arrays(vector<int>first_array, vector<int>second_array);
+
 
 #endif /* HEADER_FILE */
