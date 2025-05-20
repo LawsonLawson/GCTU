@@ -224,57 +224,30 @@ void product_of_the_elements_of_two_arrays(vector<int>first_array, vector<int>se
 
 /**
  * This function will traverse through an array and print out the even numbers of the array
- *
+ */
 void even_members_of_the_array(vector<int> some_array)
 {
-	int counter = 0, flag = 0;
-	
-	for (counter = 0; counter <= some_array.size(); counter++)
+	cout << "The even numbers in the given array are: \n";
+	for (int counter : some_array)
 	{
-		if (some_array[counter] % 2 == 0)
+		if (counter % 2 == 0)
 		{
-			flag++;
+			cout << counter << endl;
 		}
 	}
-	vector<int> even_array(flag);
-	
-	for (counter = 0; counter < even_array.size(); counter++)
-	{
-		if (some_array[counter] % 2 == 0)
-		{
-			even_array[counter] = some_array[counter];
-		}
-	}
-	print_array("The even elements in this array are:", even_array);
-
-
 }
 
-**
+/*
  * This function will traverse through and array and print out the odd numbers of the array.
- *
+ */
 void odd_members_of_the_array(vector<int> some_array)
 {
-        int counter = 0, flag = 0;
-
-        for (counter = 0; counter <= some_array.size(); counter++)
-        {
-                if (some_array[counter] % 2 != 0)
-                {
-                        flag++;
-                }
-        }
-        vector<int> odd_array(flag);
-
-        for (counter = 0; counter < odd_array.size(); counter++)
-        {
-                if (some_array[counter] % 2 != 0)
-                {
-                        odd_array[counter] = some_array[counter];
-                }
-        }
-	print_array("The odd elements in this array are:", odd_array);
-        
-
-
-}*/
+	cout << "\n\nThe odd numbers in the given array are: \n";
+	for (int counter : some_array)
+	{
+		if (counter % 2 != 0)
+		{
+			cout << counter << endl;
+		}
+	}
+}
