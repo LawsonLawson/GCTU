@@ -28,6 +28,18 @@ vector<int> generate_an_array_from_user(int size)
         return (generated_array);
 }
 
+/**
+ * This function will be responsible for printing the list of an array with a defined prompt.
+ */
+void print_array(string prompt, vector<int> some_array)
+{
+	cout << prompt << endl;
+	for (int element : some_array)
+	{
+		cout << element << endl;
+	}
+}
+
 
 /**
  * This function will print the generated arrays just to show the user
@@ -209,3 +221,60 @@ void product_of_the_elements_of_two_arrays(vector<int>first_array, vector<int>se
 
         cout << "The product of elements of the two given arrays is " << product << "." << endl;
 }
+
+/**
+ * This function will traverse through an array and print out the even numbers of the array
+ *
+void even_members_of_the_array(vector<int> some_array)
+{
+	int counter = 0, flag = 0;
+	
+	for (counter = 0; counter <= some_array.size(); counter++)
+	{
+		if (some_array[counter] % 2 == 0)
+		{
+			flag++;
+		}
+	}
+	vector<int> even_array(flag);
+	
+	for (counter = 0; counter < even_array.size(); counter++)
+	{
+		if (some_array[counter] % 2 == 0)
+		{
+			even_array[counter] = some_array[counter];
+		}
+	}
+	print_array("The even elements in this array are:", even_array);
+
+
+}
+
+**
+ * This function will traverse through and array and print out the odd numbers of the array.
+ *
+void odd_members_of_the_array(vector<int> some_array)
+{
+        int counter = 0, flag = 0;
+
+        for (counter = 0; counter <= some_array.size(); counter++)
+        {
+                if (some_array[counter] % 2 != 0)
+                {
+                        flag++;
+                }
+        }
+        vector<int> odd_array(flag);
+
+        for (counter = 0; counter < odd_array.size(); counter++)
+        {
+                if (some_array[counter] % 2 != 0)
+                {
+                        odd_array[counter] = some_array[counter];
+                }
+        }
+	print_array("The odd elements in this array are:", odd_array);
+        
+
+
+}*/
