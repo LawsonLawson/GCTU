@@ -22,9 +22,9 @@ int main()
 
 	product_of_the_elements_of_two_arrays(array, array);
 
-	/*even_members_of_the_array(array);
+	even_members_of_the_array(array);
 
-	odd_members_of_the_array(array);*/
+	odd_members_of_the_array(array);
 	
 	/*average_of_the_members_of_the_array();
 
