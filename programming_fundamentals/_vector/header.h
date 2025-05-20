@@ -19,8 +19,8 @@ void sum_of_elements_of_the_array(vector<int> some_array);
 void product_of_the_elements_of_the_array(vector<int> some_array);
 void sum_of_elements_of_two_arrays(vector<int> first_array, vector<int> second_array);
 void product_of_the_elements_of_two_arrays(vector<int>first_array, vector<int>second_array);
-// void even_members_of_the_array(vector<int> some_array);
-//void odd_members_of_the_array(vector<int> some_array);
+void even_members_of_the_array(vector<int> some_array);
+void odd_members_of_the_array(vector<int> some_array);
 void print_array(string prompt, vector<int> some_array);
 
 
